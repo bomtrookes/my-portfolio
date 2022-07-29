@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAG,OAAkB;EACrC,UAAU,EAAE,MAAM;CACnB",
+    "sources": [
+        "style.scss",
+        "config/_fonts.scss",
+        "config/_colors.scss",
+        "config/_global.scss",
+        "components/_index.scss",
+        "components/_nav.scss",
+        "pages/_index.scss",
+        "pages/_home.scss",
+        "pages/_about.scss",
+        "pages/_projects.scss",
+        "pages/_contact.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
