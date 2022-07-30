@@ -1,5 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
-  background-color: #c4e6f4;
-  text-align: center;
+  font-family: 'Racing Sans One', cursive;
+}
+
+.socials {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 28px;
+}
+
+.socials a {
+  color: #F7F9FB;
+}
+
+.socials i {
+  padding: 0 12px;
+}
+
+.resume-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.resume-box #resume-btn {
+  font-size: 24px;
+  text-decoration: none;
+  color: #EE9268;
+  border: 2px solid #EE9268;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.shape {
+  background-color: #F7F9FB;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 100vh;
+  background-color: #373129;
+}
+
+#home .title-box {
+  padding-left: 1em;
+}
+
+#home h1 {
+  font-size: 48px;
+  color: #EE9268;
+}
+
+#home h2 {
+  font-size: 32px;
+  color: #F5B597;
+  padding-left: 1em;
 }
 /*# sourceMappingURL=style.css.map */
