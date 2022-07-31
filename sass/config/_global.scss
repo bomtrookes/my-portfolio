@@ -9,6 +9,9 @@ html {
 body {
   font-family: 'Racing Sans One', cursive;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 // Media Queries
 // @media (min-width: 576px) {}

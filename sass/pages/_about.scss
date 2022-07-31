@@ -1,0 +1,31 @@
+#about {
+  height: 100vh;
+  width: 100vw;
+  background-color: $yellow;
+  overflow: hidden;
+  h2 {
+    text-align: right;
+    padding-right: 10%;
+    font-size: $h2;
+  }
+  .title-line {
+    height: 4px;
+    background-color: $grey;
+  }
+  p {
+    color : $off-white;
+    font-size: 18px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .about-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+  .about-bottom {
+    height: 30%;
+  }
+}

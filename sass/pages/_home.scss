@@ -21,6 +21,10 @@
     font-size: $h1;
     color: $orange;
   }
+  .title-line {
+    height: 4px;
+    background-color: $grey;
+  }
   h2 {
     font-size: $h2;
     color: $light-orange;
@@ -36,6 +40,7 @@
   width: 100%;
 }
 .shape {
+  display: none;
   position: absolute;
   transform: rotate(340deg);
   left: -28%;
