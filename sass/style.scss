@@ -1,8 +1,5 @@
 // Graphical
-@import "config/fonts";
-@import "config/colors";
-@import "config/global";
+@import "config/fonts", "config/colors", "config/global";
 
 // Partials
-@import "components/index";
-@import "pages/index";
+@import "components/index", "pages/index";

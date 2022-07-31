@@ -3,12 +3,12 @@
   width : 100%;
   display: flex;
   justify-content: center;
-  font-size: 28px;
+  font-size: 32px;
   a {
     color: $off-white;
   }
   i {
-    padding: 0 12px;
+    padding: 0 24px;
   }
 }
 
@@ -18,7 +18,7 @@
   justify-content: center;
   width: 100%;
   #resume-btn {
-    font-size: 24px;;
+    font-size: 28px;;
     text-decoration: none;
     color: $orange;
     background-color: $off-white;

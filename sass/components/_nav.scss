@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  #logo {
+    margin-top: 8px;
+    margin-left: 2px;
+    height: 20px;
+    width: 20px;
+    color: $orange;
+    border: 2px solid $orange;
+  }
+  #menu {
+    color: $orange;
+    font-size: 20px;
+  }
+}
