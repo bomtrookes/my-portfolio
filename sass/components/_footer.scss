@@ -1,0 +1,26 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+  background-color: $dark;
+  font-family: 'Neucha', monospace, cursive;
+  p {
+    color: $off-white;
+    font-size: 16px;
+    text-align: center;
+  }
+  a {
+    font-size: 16px;
+    color: $off-white;
+    text-decoration: none;
+    text-align: center;
+  }
+  .socials > a {
+    font-size: 28px;
+  }
+  #git {
+    color: $orange;
+  }
+}

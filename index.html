@@ -10,8 +10,15 @@
 <body>
   <nav>
     <h3 id="logo">TB</h3>
-    <a href="#contact">Contact</a>
-    <h3 id="menu">☰</h3>
+    <div class="menu">
+      <p id="close-menu">Close X</p>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <h3 id="burger">☰</h3>
   </nav>
   <section id="home">
     <div class="title-box">
@@ -34,43 +41,123 @@
 
   <section id="about">
     <div class="about-top">
-      <h2>About Me.</h2>
-      <div class="title-line"></div>
-      <p>I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow.I recently graduated from 24-week part-time coding bootcamp learning with Le Wagon.
-      I designed, implemented and shipped to production an AirBnB clone and a Rails prototype social-media app called List-It.
+      <div class="about-title">
+        <h2>About Me.</h2>
+        <div class="title-line"></div>
+      </div>
+
+      <div class="about-text">
+        <p>I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow...
       </p>
     </div>
+    <p class="about-open">Read More...</p>
+    </div>
+
     <div class="about-bottom">
-      <h2>Skills.</h2>
-      <p>HTML, CSS, Bootstrap, JavaScript ES6, SQL, git, GitHub, Heroku and Ruby on Rails.</p>
+
+      <div class="skills-container">
+        <div class="skills-title">
+          <h3>Skills.</h3>
+          <div class="title-line"></div>
+        </div>
+        <div id="skills-list">
+          <ul>
+            <li><i class="fa-solid fa-caret-right"></i> HTML</li>
+            <li><i class="fa-solid fa-caret-right"></i> CSS</li>
+            <li><i class="fa-solid fa-caret-right"></i> Bootstrap</li>
+            <li><i class="fa-solid fa-caret-right"></i> Ruby on Rails</li>
+            <li><i class="fa-solid fa-caret-right"></i> JavaScript</li>
+          </ul>
+          <ul>
+            <li><i class="fa-solid fa-caret-right"></i> SQL</li>
+            <li><i class="fa-solid fa-caret-right"></i> git</li>
+            <li><i class="fa-solid fa-caret-right"></i> GitHub</li>
+            <li><i class="fa-solid fa-caret-right"></i> Heroku</li>
+            <li><i class="fa-solid fa-caret-right"></i> TDD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="about-modal">
+      <p class="about-close">Close X</p>
+      <div class="modal-container">
+        <div class="square"></div>
+        <div>
+          <h3>About Me.</h3>
+          <p>I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow.
+          <br>
+          I recently graduated from 24-week part-time coding bootcamp learning with Le Wagon.
+          I designed, implemented and shipped to production an AirBnB clone and a Rails prototype social-media app called List-It.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="projects">
-    <!-- <h2>Projects.</h2> -->
-      <div class="pro-1">
-        <h2>List-It</h2>
+    <h2>Projects.</h2>
+    <div class="pro-container">
+    <div class="pro-1">
+        <div class="pro-1-content">
+          <h2>List-It</h2>
+          <p>
+          List-It is a social media app. It is a cross-between Instagram, Reddit and Buzz Feed.
+          </p>
+          <div class="options">
+            <p class="list-open">Read More</h3>
+              <div class="icons">
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+        </div>
         <img src="img/listit.png" alt="list-it thumbnail">
-        <h3 class="list-open">Read More</h3>
+        <ul>
+          <li><p>Ruby on Rails</p></li>
+          <li><p>JavaScript</p></li>
+          <li><p>Stimulus</p></li>
+          <li><p>PGSearch</p></li>
+        </ul>
+
         <div class="list-modal">
           <p class="list-close">X</p>
-          <p>List-It is the final project that we made as a group of 3 during the Le Wagon Bootcamp. It was built using Ruby on Rails. As a team we are working to update this project.
-          List-It a social media app. It is a cross-between Instagram, Reddit and Buzz Feed.
-          </p>
+            <p>List-It is the final project that we made as a group of 3 during the Le Wagon Bootcamp. It was built using Ruby on Rails. As a team we are working to update this project.
+            List-It a social media app. It is a cross-between Instagram, Reddit and Buzz Feed.
+            </p>
         </div>
       </div>
 
       <div class="pro-2">
-        <h2>Puzzlend</h2>
-        <img src="img/puzzlend1.png" alt="puzzlend img">
-        <img src="img/puzzlend2.png" alt="puzzlend img">
-        <h3 class="puzz-open">Read More</h3>
+        <div class="pro-2-content">
+          <h2>Puzzlend</h2>
+          <p>A market place app where you can rent out or borrow puzzles from fellow users.</p>
+          <div class="options">
+            <p class="puzz-open">Read More</p>
+              <div class="icons">
+                <a href=""><i class="fa-brands fa-github"></i></a>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              </div>
+          </div>
+          <img src="img/puzzlend1.png" alt="puzzlend img">
+          <img style="display: none" src="img/puzzlend2.png" alt="puzzlend img">
+          <ul>
+            <li><p>Ruby on Rails</p></li>
+            <li><p>JavaScript</p></li>
+            <li><p>Stimulus</p></li>
+            <li><p>PGSearch</p></li>
+          </ul>
+        </div>
         <div class="puzz-modal">
           <p class="puzz-close">X</p>
           <p>Puzzlend was our first group project. This was our AirBnB market place clone. This is where I learnt the foundations of Ruby on Rails in prep for our major final project, List-It.
           </p>
         </div>
       </div>
+    </div>
+    <div class="index">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
   </section>
 
   <section id="contact">
@@ -79,16 +166,25 @@
       <h3>Get in Touch</h3>
       <p>Have a question for me? Let me know, I'm always looking for new and exciting oppurtunities.</p>
     </div>
-    <div class="contact-icons">
+    <div style="display: none;" class="contact-icons">
       <p><i class="fa-solid fa-location-dot"></i> London</p>
       <p><i class="fa-solid fa-envelope"></i> tom.brookes15@gmail.com</p>
     </div>
+
+  </section>
+
+  <footer>
     <div class="socials">
       <a href="https://www.linkedin.com/in/thomasbrookes" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href="https://www.github.com/bomtrookes" target="_blank"><i class="fa-brands fa-github"></i></a>
       <a href="https://www.codepen.io/bomtrookes" target="_blank"><i class="fa-brands fa-codepen"></i></a>
     </div>
-  </section>
+    <div>
+      <p>Built & Designed by Tom Brookes</p>
+      <p>Checkout the <a id="git" href="https://github.com/bomtrookes/my-portfolio">Github Repo.</a></p>
+    </div>
+
+  </footer>
 
   <script src="https://kit.fontawesome.com/1e75d3a072.js" crossorigin="anonymous"></script>
   <script src="app.js"></script>
