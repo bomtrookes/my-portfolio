@@ -42,12 +42,13 @@
 }
 #contact > .circle {
   display: none;
-    position: absolute;
-    bottom: 33px;
-    left: 35px;
-    height: 122vw;
-    width: 80vw;
-    border-radius: 50%;
-    background-color: $off-white;
-    transform: rotate(62deg);
+  padding: 0px 0px 0px 0px;
+  position: absolute;
+  bottom: 33px;
+  left: 35px;
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  background-color: $off-white;
+  transform: rotate(62deg);
 }

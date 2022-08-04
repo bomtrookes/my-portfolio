@@ -710,6 +710,11 @@ footer #git {
 
 #projects .pro-1 .options a {
   padding: 0 6px;
+  color: #242630;
+}
+
+#projects .pro-1 .options a:visited {
+  color: inherit;
 }
 
 #projects .pro-1 .options .list-open {
@@ -767,8 +772,8 @@ footer #git {
   padding: 0 6px;
 }
 
-#projects .pro-2 .options .puzz-open:visited, #projects .pro-2 .options a:visited {
-  color: #242630;
+#projects .pro-2 .options a:visited {
+  color: inherit;
 }
 
 #projects .pro-2 .pro-2-content {
@@ -817,11 +822,11 @@ footer #git {
 }
 
 .triangle {
-  display: none;
+  padding: 0px 0px 0px 0px;
   position: absolute;
   top: 0;
   left: -35px;
-  height: 98%;
+  height: 110%;
   width: 113%;
   background-color: #F7F9FB;
   -webkit-clip-path: polygon(106% 15%, 0% 0, 79% 94%);
@@ -900,11 +905,12 @@ footer #git {
 
 #contact > .circle {
   display: none;
+  padding: 0px 0px 0px 0px;
   position: absolute;
   bottom: 33px;
   left: 35px;
-  height: 122vw;
-  width: 80vw;
+  height: 110%;
+  width: 110%;
   border-radius: 50%;
   background-color: #F7F9FB;
   -webkit-transform: rotate(62deg);

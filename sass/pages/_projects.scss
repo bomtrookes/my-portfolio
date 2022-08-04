@@ -73,6 +73,10 @@
       padding-left: 6px;
       a {
         padding: 0 6px;
+        color: $dark;
+      }
+      a:visited {
+        color: inherit;
       }
       .list-open {
         font-family: 'Neucha', monospace, cursive;
@@ -106,9 +110,9 @@
       width: 100%;
       .puzz-open, a {
         padding: 0 6px;
-        &:visited {
-          color: $dark;
-        }
+      }
+      a:visited {
+        color: inherit;
       }
     }
     .pro-2-content {
@@ -149,11 +153,11 @@
   }
 }
 .triangle {
-  display: none;
+  padding: 0px 0px 0px 0px;
   position: absolute;
   top: 0;
   left: -35px;
-  height: 98%;
+  height: 110%;
   width: 113%;
   background-color: $off-white;
   clip-path: polygon(106% 15%, 0% 0, 79% 94%);
