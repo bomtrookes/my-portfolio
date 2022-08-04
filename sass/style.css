@@ -594,14 +594,41 @@ footer #git {
       scroll-snap-type: x mandatory;
 }
 
+#projects .project-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 #projects h2 {
   font-size: 32px;
-  color: #69696F;
+  color: #242630;
   width: 100%;
+  text-align: right;
+  padding-right: 12px;
+}
+
+#projects h3 {
+  font-size: 24px;
+}
+
+#projects .title-line {
+  height: 4px;
+  width: 45%;
+  background-color: #69696F;
 }
 
 #projects p {
   font-size: 18px;
+  font-family: 'Neucha', monospace, cursive;
 }
 
 #projects .pro-1 {
@@ -615,13 +642,22 @@ footer #git {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+#projects .pro-1 .pro-1-content {
+  margin: 0 24px;
+  text-align: justify;
+}
+
+#projects .pro-1 .pro-1-content p {
+  margin-top: 12px;
 }
 
 #projects .pro-1 img {
@@ -639,8 +675,20 @@ footer #git {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+  font-size: 18px;
+  padding-left: 6px;
+}
+
+#projects .pro-1 .options a {
+  padding: 0 6px;
+}
+
+#projects .pro-1 .options .list-open {
+  font-family: 'Neucha', monospace, cursive;
 }
 
 #projects .pro-2 {
@@ -654,9 +702,9 @@ footer #git {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -676,29 +724,31 @@ footer #git {
 }
 
 #projects .pro-2 .options {
+  margin-top: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
-}
-
-#projects .pro-2 .pro-2-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  font-size: 18px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
+  width: 100%;
+}
+
+#projects .pro-2 .options .puzz-open, #projects .pro-2 .options a {
+  padding: 0 6px;
+}
+
+#projects .pro-2 .pro-2-content {
+  padding: 0 24px;
+}
+
+#projects .pro-2 .pro-2-content p {
+  text-align: justify;
+  margin-top: 12px;
 }
 
 #projects .list-modal, #projects .puzz-modal {
@@ -740,14 +790,30 @@ footer #git {
 #contact {
   height: 80vh;
   background-color: #de8258;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #contact h2 {
   font-size: 32px;
   color: #242630;
+  margin-top: 32px;
+  margin-left: 24px;
+}
+
+#contact .title-line {
+  height: 4px;
+  width: 55%;
+  background-color: #69696F;
 }
 
 #contact h3 {
+  margin-top: 30%;
   font-size: 24px;
 }
 
@@ -755,6 +821,8 @@ footer #git {
   text-align: center;
   width: 90%;
   font-size: 20px;
+  font-family: 'Neucha', monospace, cursive;
+  padding-top: 24px;
 }
 
 #contact .contact-message {
@@ -765,13 +833,15 @@ footer #git {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 #contact .contact-icons {

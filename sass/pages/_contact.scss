@@ -1,24 +1,36 @@
 #contact {
   height: 80vh;
   background-color: $orange;
+  display: flex;
+  flex-direction: column;
   h2 {
     font-size: $h2;
     color : $dark;
+    margin-top: 32px;
+    margin-left: 24px;
+  }
+  .title-line {
+    height: 4px;
+    width: 55%;
+    background-color: $grey;
   }
   h3 {
+    margin-top: 30%;
     font-size: 24px;
   }
   p {
     text-align: center;
     width: 90%;
     font-size: 20px;
+    font-family: 'Neucha', monospace, cursive;
+    padding-top: 24px
   }
   .contact-message {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 70%;
+    flex-grow: 1;
   }
   .contact-icons {
     display: flex;

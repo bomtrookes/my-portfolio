@@ -14,13 +14,30 @@
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   }
+  .project-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
   h2 {
     font-size: $h2;
-    color : $grey;
+    color : $dark;
     width: 100%;
+    text-align: right;
+    padding-right: 12px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  .title-line {
+    height: 4px;
+    width: 45%;
+    background-color: $grey;
   }
   p {
     font-size: 18px;
+    font-family: 'Neucha', monospace, cursive;
   }
   .pro-1 {
     scroll-snap-align: start;
@@ -28,9 +45,16 @@
     min-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
+    .pro-1-content {
+      margin: 0 24px;
+      text-align: justify;
+      p {
+        margin-top: 12px;
+      }
+    }
     img {
       max-height: 60%;
     }
@@ -41,7 +65,16 @@
     }
     .options {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      margin-top: 12px;
+      font-size: 18px;
+      padding-left: 6px;
+      a {
+        padding: 0 6px;
+      }
+      .list-open {
+        font-family: 'Neucha', monospace, cursive;
+      }
     }
   }
   .pro-2 {
@@ -50,7 +83,7 @@
     min-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     img {
@@ -63,16 +96,22 @@
       list-style: none;
     }
     .options {
+      margin-top: 12px;
       display: flex;
-      justify-content: space-around;
+      font-size: 18px;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
+      .puzz-open, a {
+        padding: 0 6px;
+      }
     }
     .pro-2-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-      height: 100%;
+      padding: 0 24px;
+      p {
+        text-align: justify;
+        margin-top: 12px;
+      }
     }
   }
   .list-modal, .puzz-modal {
