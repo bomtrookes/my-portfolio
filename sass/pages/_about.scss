@@ -3,6 +3,7 @@
 //   min-width: 200px;
 // }
 #about {
+  position: relative;
   height: 100vh;
   min-height: 300px;
   width: 100vw;
@@ -13,6 +14,7 @@
     font-family: 'Neucha', monospace, cursive;
   }
   .about-title {
+    z-index: 3;
     padding-top: 12px;
     display: flex;
     flex-direction: column;
@@ -22,6 +24,7 @@
       font-size: $h2;
     }
     .title-line {
+      z-index: 3;
       height: 4px;
       width : 45%;
       background-color: $grey;
@@ -29,6 +32,7 @@
     }
   }
   .about-text {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,6 +46,7 @@
     }
   }
   .about-top {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -55,6 +60,7 @@
     };
   }
   .about-bottom {
+    z-index: 3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,6 +76,7 @@
     padding-left: 8%;
   }
   .title-line {
+    z-index: 3;
     height: 4px;
     width : 40%;
     background-color: $grey;
@@ -151,4 +158,16 @@
   display: block;
   background-color: $off-white;
   background-image: linear-gradient(350deg, $orange 0%, $orange 60%, $dark 60%, $dark 60%);
+}
+.hexagon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 64%;
+  width: 108%;
+  background-color: $off-white;
+  clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
+
+
 }

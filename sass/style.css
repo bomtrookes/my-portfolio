@@ -9,12 +9,14 @@
 
 html {
   font-size: 10px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Racing Sans One', cursive;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -39,12 +41,13 @@ nav {
   padding: 0 8px;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 10;
   width: 100%;
   height: 70px;
 }
 
 nav #logo {
+  z-index: 10;
   margin-top: 8px;
   margin-left: 2px;
   height: 30px;
@@ -111,6 +114,7 @@ nav .menu .links {
 nav #burger {
   color: #de8258;
   font-size: 32px;
+  z-index: 11;
 }
 
 .socials {
@@ -330,6 +334,7 @@ footer #git {
 }
 
 #about {
+  position: relative;
   height: 100vh;
   min-height: 300px;
   width: 100vw;
@@ -343,6 +348,7 @@ footer #git {
 }
 
 #about .about-title {
+  z-index: 3;
   padding-top: 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,6 +368,7 @@ footer #git {
 }
 
 #about .about-title .title-line {
+  z-index: 3;
   height: 4px;
   width: 45%;
   background-color: #69696F;
@@ -369,6 +376,7 @@ footer #git {
 }
 
 #about .about-text {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,6 +401,7 @@ footer #git {
 }
 
 #about .about-top {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,6 +426,7 @@ footer #git {
 }
 
 #about .about-bottom {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,6 +460,7 @@ footer #git {
 }
 
 #about .skills-title .title-line {
+  z-index: 3;
   height: 4px;
   width: 40%;
   background-color: #69696F;
@@ -565,7 +576,20 @@ footer #git {
   background-image: linear-gradient(350deg, #de8258 0%, #de8258 60%, #242630 60%, #242630 60%);
 }
 
+.hexagon {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -16px;
+  height: 64%;
+  width: 108%;
+  background-color: #F7F9FB;
+  -webkit-clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
+          clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
+}
+
 #projects {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -583,6 +607,7 @@ footer #git {
 }
 
 #projects .pro-container {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,6 +767,10 @@ footer #git {
   padding: 0 6px;
 }
 
+#projects .pro-2 .options .puzz-open:visited, #projects .pro-2 .options a:visited {
+  color: #242630;
+}
+
 #projects .pro-2 .pro-2-content {
   padding: 0 24px;
 }
@@ -787,7 +816,20 @@ footer #git {
   background-color: #69696F;
 }
 
+.triangle {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -35px;
+  height: 98%;
+  width: 113%;
+  background-color: #F7F9FB;
+  -webkit-clip-path: polygon(106% 15%, 0% 0, 79% 94%);
+          clip-path: polygon(106% 15%, 0% 0, 79% 94%);
+}
+
 #contact {
+  position: relative;
   height: 80vh;
   background-color: #de8258;
   display: -webkit-box;
@@ -842,6 +884,7 @@ footer #git {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  z-index: 3;
 }
 
 #contact .contact-icons {
@@ -853,5 +896,18 @@ footer #git {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 24px;
+}
+
+#contact > .circle {
+  display: none;
+  position: absolute;
+  bottom: 33px;
+  left: 35px;
+  height: 122vw;
+  width: 80vw;
+  border-radius: 50%;
+  background-color: #F7F9FB;
+  -webkit-transform: rotate(62deg);
+          transform: rotate(62deg);
 }
 /*# sourceMappingURL=style.css.map */
