@@ -5,9 +5,12 @@
 }
 html {
   font-size: $root;
+  overflow-x: hidden;
 }
 body {
   font-family: 'Racing Sans One', cursive;
+  transition: all 0.5s;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   display: none;

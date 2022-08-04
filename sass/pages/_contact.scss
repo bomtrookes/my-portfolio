@@ -1,28 +1,53 @@
 #contact {
-  height: 100vh;
+  position: relative;
+  height: 80vh;
   background-color: $orange;
+  display: flex;
+  flex-direction: column;
   h2 {
     font-size: $h2;
     color : $dark;
+    margin-top: 32px;
+    margin-left: 24px;
+  }
+  .title-line {
+    height: 4px;
+    width: 55%;
+    background-color: $grey;
   }
   h3 {
+    margin-top: 30%;
     font-size: 24px;
   }
   p {
     text-align: center;
     width: 90%;
     font-size: 20px;
+    font-family: 'Neucha', monospace, cursive;
+    padding-top: 24px
   }
   .contact-message {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 70%;
+    flex-grow: 1;
+    z-index: 3;
   }
   .contact-icons {
     display: flex;
     flex-direction: column;
     padding-bottom: 24px;
   }
+}
+#contact > .circle {
+  display: none;
+    position: absolute;
+    bottom: 33px;
+    left: 35px;
+    height: 122vw;
+    width: 80vw;
+    border-radius: 50%;
+    background-color: $off-white;
+    transform: rotate(62deg);
 }
