@@ -2,22 +2,35 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // background-color: rgba(66, 255, 24, 0.3);
 }
 html {
   font-size: $root;
   overflow-x: hidden;
+  // height: 100vh;
 }
 body {
   font-family: 'Racing Sans One', cursive;
-  transition: all 0.5s;
   overflow-x: hidden;
+  background-color: $off-white;
 }
 ::-webkit-scrollbar {
   display: none;
 }
-
 // Media Queries
-// @media (min-width: 576px) {}
+// @media (min-width: 992px) {
+//   body {
+//     min-width: 90vw;
+//     margin: 0 auto;
+//   }
+//   section, footer {
+//     margin: 0 auto;
+//     width: 90vw !important;
+//     min-width: 200px;
+//     border-left: 2px solid $grey;
+//     border-right: 2px solid $grey;
+//   }
+// }
 // @media (min-width: 768px) {}
 // @media (min-width: 992px) {}
 // @media (min-width: 1200px) {}

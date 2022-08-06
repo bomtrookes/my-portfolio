@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 30rem;
   background-color: $dark;
   overflow: hidden;
   .title-box {
@@ -14,7 +15,7 @@
     justify-content: center;
     height: 60%;
     width: 100%;
-    padding-top: 65px;
+    margin-top: 16rem;
     padding-left: 6%;
   }
   h1 {
@@ -22,7 +23,7 @@
     color: $orange;
   }
   .title-line {
-    height: 4px;
+    min-height: 4px;
     background-color: $grey;
   }
   h2 {
