@@ -43,23 +43,23 @@
     <div class="about-top">
       <div class="about-title">
         <h2>About Me.</h2>
-        <div class="title-line"></div>
+        <div style="display:none" class="title-line"></div>
       </div>
 
       <div class="about-text">
         <p>I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow...
-      </p>
-    </div>
-    <p class="about-open">Read More...</p>
+        </p>
+        <p class="about-open">Read More...</p>
+      </div>
     </div>
 
     <div class="about-bottom">
+      <div class="skills-title">
+        <h3>Skills.</h3>
+        <div style="display:none" class="title-line"></div>
+      </div>
 
       <div class="skills-container">
-        <div class="skills-title">
-          <h3>Skills.</h3>
-          <div class="title-line"></div>
-        </div>
         <div id="skills-list">
           <ul>
             <li><i class="fa-solid fa-caret-right"></i> HTML</li>
@@ -78,6 +78,7 @@
         </div>
       </div>
     </div>
+
     <div class="about-modal">
       <p class="about-close">Close X</p>
       <div class="modal-container">
@@ -97,7 +98,7 @@
   <section id="projects">
     <div class="project-box">
       <h2>Projects.</h2>
-      <div class="title-line"></div>
+      <div style="display:none" class="title-line"></div>
     </div>
 
     <div class="pro-container">
@@ -115,8 +116,8 @@
               </div>
           </div>
         </div>
-        <img src="img/listit.png" alt="list-it thumbnail">
-        <ul>
+        <img class="list" src="img/listit.png" alt="list-it thumbnail">
+        <ul class="li-lang">
           <li><p>Ruby on Rails</p></li>
           <li><p>JavaScript</p></li>
           <li><p>Stimulus</p></li>
@@ -169,25 +170,24 @@
 
   <section id="contact">
     <h2>Contact Me.</h2>
-    <div class="title-line"></div>
-    <div class="contact-message">
-      <h3>Get in Touch</h3>
-      <p>Have a question for me? Let me know, I'm always looking for new and exciting oppurtunities.</p>
+    <div style="display:none" class="title-line"></div>
+    <div class="container">
+      <div class="contact-message">
+        <h3>Get in Touch</h3>
+        <p>Have a question for me? Let me know, I'm always looking for new and exciting oppurtunities.</p>
+      </div>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/thomasbrookes" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.github.com/bomtrookes" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.codepen.io/bomtrookes" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+      </div>
     </div>
-    <div style="display: none;" class="contact-icons">
-      <p><i class="fa-solid fa-location-dot"></i> London</p>
-      <p><i class="fa-solid fa-envelope"></i> tom.brookes15@gmail.com</p>
-    </div>
+
     <div class="circle"></div>
   </section>
 
   <footer>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/thomasbrookes" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://www.github.com/bomtrookes" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.codepen.io/bomtrookes" target="_blank"><i class="fa-brands fa-codepen"></i></a>
-    </div>
-    <div>
+    <div id="foot-info">
       <p>Built & Designed by Tom Brookes</p>
       <p>Checkout the <a id="git" href="https://github.com/bomtrookes/my-portfolio">Github Repo.</a></p>
     </div>

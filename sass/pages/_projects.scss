@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: space-between;
+  min-height: 100vh;
+  min-width: 200px;
   width: 100vw;
   overflow: hidden;
   background-color: $teal;
@@ -12,6 +14,7 @@
     display: flex;
     height: 100%;
     width: 100vw;
+    flex-grow: 1;
   overflow: hidden;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
@@ -27,40 +30,44 @@
     color : $dark;
     width: 100%;
     text-align: right;
-    padding-right: 12px;
+    margin-top: 2rem;
+    padding-right: 2rem;
   }
   h3 {
     font-size: 24px;
   }
   .title-line {
-    height: 4px;
+    min-height: 4px;
     width: 45%;
     background-color: $grey;
   }
   p {
-    font-size: 18px;
+    font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
     font-family: 'Neucha', monospace, cursive;
   }
   .pro-1 {
     scroll-snap-align: start;
-    height: 100%;
-    min-width: 100%;
     display: flex;
+    flex-grow: 1;
+    min-width: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
     .pro-1-content {
-      margin: 0 24px;
+      padding: 1rem;
       text-align: justify;
-      p {
-        margin-top: 12px;
-      }
+      border-top: 4px solid $dark;
+      border-bottom: 4px solid $dark;
+      margin: 2rem 0;
+      width: min(64rem, 80%);
+      background-color: rgba(255, 255, 255, 0.3);
     }
-    img {
-      max-height: 60%;
+    .list {
+      max-height: 40rem;
     }
     ul {
+      width: 36rem;
       columns: 2;
       text-align: center;
       list-style: none;
@@ -68,11 +75,14 @@
     .options {
       display: flex;
       justify-content: space-between;
-      margin-top: 12px;
+      margin-top: 2rem;
       font-size: 18px;
       padding-left: 6px;
       a {
-        padding: 0 6px;
+        padding: 0 1rem;
+        &:visited {
+          color: $dark;
+        }
       }
       .list-open {
         font-family: 'Neucha', monospace, cursive;
@@ -81,21 +91,23 @@
   }
   .pro-2 {
     scroll-snap-align: start;
-    height: 100%;
     min-width: 100%;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
     img {
-      max-width: 90%;
-      padding-bottom: 8px;
+      max-width: 520px;
+      width: 80%;
+      padding: 3rem 0;
     }
     ul {
       columns: 2;
       text-align: center;
       list-style: none;
+      width: 36rem;
     }
     .options {
       margin-top: 12px;
@@ -112,10 +124,14 @@
       }
     }
     .pro-2-content {
-      padding: 0 24px;
+      padding: 1rem;
+      border-top: 4px solid $dark;
+      border-bottom: 4px solid $dark;
+      margin: 2rem 0;
+      width: min(64rem, 80%);
+      background-color: rgba(255, 255, 255, 0.3);
       p {
         text-align: justify;
-        margin-top: 12px;
       }
     }
   }

@@ -1,43 +1,61 @@
 #contact {
   position: relative;
-  height: 80vh;
+  height: 40px;
+  min-height: 85vh;
+  min-width: 200px;
   background-color: $orange;
   display: flex;
   flex-direction: column;
   h2 {
     font-size: $h2;
     color : $dark;
-    margin-top: 32px;
-    margin-left: 24px;
+    margin-top: 3rem;
+    margin-left: 2rem;
   }
   .title-line {
-    height: 4px;
+    min-height: 4px;
     width: 55%;
     background-color: $grey;
   }
   h3 {
-    margin-top: 30%;
     font-size: 24px;
   }
   p {
-    text-align: center;
-    width: 90%;
-    font-size: 20px;
+    margin-top: 1rem;
+    text-align: justify;
+    font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
     font-family: 'Neucha', monospace, cursive;
-    padding-top: 24px
+  }
+  .container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .contact-message {
     display: flex;
+    padding: 1rem;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-grow: 1;
     z-index: 3;
+    margin: 2rem 0;
+    border-top: 4px solid $dark;
+    border-bottom: 4px solid $dark;
+    width: min(64rem, 80%);
+    background-color: rgba(255, 255, 255, 0.3);
   }
-  .contact-icons {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 24px;
+  .socials {
+    margin: 2rem 0 0 0;
+  }
+  .socials > a {
+    font-size: 28px;
+    padding: 0 2rem;
+    color: $off-white;
+    &:visited {
+      color: $off-white;
+    }
   }
 }
 #contact > .circle {

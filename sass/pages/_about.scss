@@ -3,15 +3,22 @@
 //   min-width: 200px;
 // }
 #about {
+  font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
   position: relative;
-  height: 100vh;
-  min-height: 300px;
+  min-height: 100vh;
+  min-width: 30rem;
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  min-width: 200px;
   background-color: $yellow;
   overflow: hidden;
   p {
     font-family: 'Neucha', monospace, cursive;
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.237);
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
   }
   .about-title {
     z-index: 3;
@@ -22,10 +29,11 @@
     width : 100%;
     h2 {
       font-size: $h2;
+      padding-right: 2rem;
     }
     .title-line {
       z-index: 3;
-      height: 4px;
+      min-height: 4px;
       width : 45%;
       background-color: $grey;
       border-radius: 4px 0 0 4px;
@@ -37,59 +45,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: inherit;
+    margin: 7rem 0;
     p {
       color : $dark;
-      font-size: 18px;
-      width: 80%;
+      width: min(64rem, 80%);
       margin: 0 auto;
       overflow: hidden;
     }
+    .about-open {
+      font-family: 'Racing Sans One', cursive;
+      color: $off-white;
+      margin-top: 4rem;
+    };
   }
   .about-top {
     z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 55%;
-    overflow: hidden;
-    .about-open{
-      font-family: 'Racing Sans One', cursive;
-      font-size: 18px;
-      color: $off-white;
-    };
+    flex-grow: 1;
   }
   .about-bottom {
     z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 45%;
+    flex-grow: 1;
   }
   .skills-title {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  h3 {
-    font-size: 28px;
-    padding-left: 8%;
-  }
-  .title-line {
-    z-index: 3;
-    height: 4px;
-    width : 40%;
-    background-color: $grey;
-    border-radius: 0 4px 4px 0;
-  }
-  }
-  .skills-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
-    width : 100%;
+    width: 100%;
+    h3 {
+      font-size: 28px;
+      padding-left: 8%;
+    }
+    .title-line {
+      z-index: 3;
+      height: 4px;
+      width : 40%;
+      background-color: $grey;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+  .skills-container {
+    display: grid;
+    place-items: center;
+    margin: 5rem 2rem;
   }
   #skills-list {
     display: flex;
@@ -98,10 +95,11 @@
     padding: 18px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.08);
-    width: 75%;
+    width: min(64rem, 80%);
+    min-width: 280px;
     ul {
     color : $off-white;
-    font-size: 18px;
+    font-size: 2rem;
     list-style: none;
     }
   }
@@ -117,7 +115,6 @@
   z-index: 10;
   .about-close {
     color: $off-white;
-    font-size: 16px;
     padding: 8px;
     width: 100%;
     text-align: right;
@@ -139,7 +136,6 @@
       padding-bottom: 12px;
     }
     p {
-      font-size: 18px;
       padding: 0 24px 24px 24px;
     }
     .square {
@@ -168,6 +164,4 @@
   width: 108%;
   background-color: $off-white;
   clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
-
-
 }
