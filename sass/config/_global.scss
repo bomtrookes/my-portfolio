@@ -34,3 +34,11 @@ body {
 // @media (min-width: 768px) {}
 // @media (min-width: 992px) {}
 // @media (min-width: 1200px) {}
+
+h2 {
+  opacity: 0 !important;
+  transition: all 0.4s !important;
+}
+.show {
+  opacity: 1 !important;
+}

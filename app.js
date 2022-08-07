@@ -67,3 +67,19 @@ links.forEach((link) => {
     menu.style.transition = "none";
   })
 })
+
+// Intersection Observer
+const headings = document.querySelectorAll("h2");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle("show", entry.isIntersecting)
+    if(entry.isIntersecting) observer.unobserve(entry.target)
+  })
+}, {
+  threshold: 1
+});
+
+headings.forEach(heading => {
+  observer.observe(heading)
+})

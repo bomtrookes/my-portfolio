@@ -21,6 +21,15 @@ body {
   display: none;
 }
 
+h2 {
+  opacity: 0 !important;
+  transition: all 0.4s !important;
+}
+
+.show {
+  opacity: 1 !important;
+}
+
 nav {
   display: flex;
   align-items: center;
