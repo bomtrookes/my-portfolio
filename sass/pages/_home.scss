@@ -7,6 +7,9 @@
   min-height: 100vh;
   min-width: 30rem;
   background-color: $dark;
+  // background: url("../../img/test-bg.png") center no-repeat;
+  // background-size: cover;
+  // background-position: right;
   overflow: hidden;
   .title-box {
     z-index: 1;
@@ -21,15 +24,38 @@
   h1 {
     font-size: $h1;
     color: $orange;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.3s;
+  }
+  .fade-up {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-in {
+    opacity: 1;
   }
   .title-line {
     min-height: 4px;
     background-color: $grey;
+    border-radius: 4px 0 0 4px;
+    transform: translateX(100%);
+    transition: all 0.3s;
+  }
+  .enter-right {
+    transform: translateX(0);
   }
   h2 {
     font-size: $h2;
     color: $light-orange;
     padding-left: 1em;
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  .fade-down {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .bottom {
