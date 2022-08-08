@@ -12,7 +12,7 @@ html {
 body {
   font-family: 'Racing Sans One', cursive;
   overflow-x: hidden;
-  background-color: $off-white;
+  background-color: $dark;
 }
 ::-webkit-scrollbar {
   display: none;
@@ -35,7 +35,7 @@ body {
 // @media (min-width: 992px) {}
 // @media (min-width: 1200px) {}
 
-h2 {
+.reveal {
   opacity: 0 !important;
   transition: all 0.8s !important;
   transform: translateY(20px) !important;

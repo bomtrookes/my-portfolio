@@ -3,6 +3,7 @@ const body = document.querySelector("body");
 // Loading Animation
 window.onload = function() {
   document.querySelector('.title-box h1').classList.add("fade-up");
+  document.querySelector('.title-box h2').classList.add("fade-down");
   document.querySelector('.title-box .title-line').classList.add("enter-right");
   document.querySelector('#resume-btn').classList.add("fade-up");
   document.querySelector('.socials').classList.add("fade-up");
@@ -85,7 +86,7 @@ closeAbout.addEventListener("click", () => {
   })
 
 // Intersection Observer
-const headings = document.querySelectorAll("h2");
+const headings = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -93,7 +94,7 @@ const observer = new IntersectionObserver(entries => {
     if(entry.isIntersecting) observer.unobserve(entry.target)
   })
 }, {
-  threshold: 1
+  threshold: 0.2
   //rootMargin: "-100px" makes smaller container, with + you can load an image sooner
 });
 

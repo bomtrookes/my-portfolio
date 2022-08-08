@@ -3,6 +3,8 @@
 //   min-width: 200px;
 // }
 #about {
+  opacity: 0;
+  transition: all 0.3s;
   font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
   position: relative;
   min-height: 100vh;
@@ -62,10 +64,14 @@
   .about-top {
     z-index: 3;
     flex-grow: 1;
+    opacity: 0;
+    transition: all 0.4s;
   }
   .about-bottom {
     z-index: 3;
     flex-grow: 1;
+    opacity: 0;
+    transition: all 0.4s;
   }
   .skills-title {
     display: flex;

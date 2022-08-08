@@ -14,14 +14,14 @@ html {
 body {
   font-family: "Racing Sans One", cursive;
   overflow-x: hidden;
-  background-color: #F7F9FB;
+  background-color: #242630;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
 
-h2 {
+.reveal {
   opacity: 0 !important;
   transition: all 0.8s !important;
   transform: translateY(20px) !important;
@@ -225,6 +225,13 @@ footer #foot-info {
   font-size: clamp(3rem, 1rem + 5vw, 5rem);
   color: #d79576;
   padding-left: 1em;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+#home .fade-down {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .bottom {
@@ -295,6 +302,8 @@ footer #foot-info {
   }
 }
 #about {
+  opacity: 0;
+  transition: all 0.3s;
   font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
   position: relative;
   min-height: 100vh;
@@ -355,10 +364,14 @@ footer #foot-info {
 #about .about-top {
   z-index: 3;
   flex-grow: 1;
+  opacity: 0;
+  transition: all 0.4s;
 }
 #about .about-bottom {
   z-index: 3;
   flex-grow: 1;
+  opacity: 0;
+  transition: all 0.4s;
 }
 #about .skills-title {
   display: flex;
@@ -462,6 +475,8 @@ footer #foot-info {
 }
 
 #projects {
+  opacity: 0;
+  transition: all 0.3s;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -645,6 +660,8 @@ footer #foot-info {
 }
 
 #contact {
+  opacity: 0;
+  transition: all 0.3s;
   position: relative;
   height: 40px;
   min-height: 85vh;
