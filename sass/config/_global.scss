@@ -37,8 +37,10 @@ body {
 
 h2 {
   opacity: 0 !important;
-  transition: all 0.4s !important;
+  transition: all 0.8s !important;
+  transform: translateY(20px) !important;
 }
 .show {
   opacity: 1 !important;
+  transform: translateY(0) !important;
 }

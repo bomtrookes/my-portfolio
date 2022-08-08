@@ -1,3 +1,15 @@
+const body = document.querySelector("body");
+
+// Loading Animation
+window.onload = function() {
+  document.querySelector('.title-box h1').classList.add("fade-up");
+  document.querySelector('.title-box .title-line').classList.add("enter-right");
+  document.querySelector('#resume-btn').classList.add("fade-up");
+  document.querySelector('.socials').classList.add("fade-up");
+  document.querySelector('#logo').classList.add("fade-in");
+  document.querySelector('#burger').classList.add("fade-in");
+}
+
 // Project Modal
  const openList = document.querySelector(".list-open");
  const closeList = document.querySelector(".list-close")
@@ -14,21 +26,25 @@
   const closePuzz = document.querySelector(".puzz-close");
   const puzzModal = document.querySelector(".puzz-modal");
  openPuzz.addEventListener("click", () => {
-  puzzModal.classList.toggle("active")
+  puzzModal.classList.toggle("active");
+  // body.style.position = "fixed";
  })
  closePuzz.addEventListener("click", () => {
   puzzModal.classList.toggle("active")
- })
- // About
- const openAbout = document.querySelector(".about-open");
- const closeAbout = document.querySelector(".about-close")
- const aboutModal = document.querySelector(".about-modal");
+  // body.style.position = "static";
+})
+// About
+const openAbout = document.querySelector(".about-open");
+const closeAbout = document.querySelector(".about-close")
+const aboutModal = document.querySelector(".about-modal");
 
- openAbout.addEventListener("click", () => {
-   aboutModal.classList.toggle("active")
-  })
-  closeAbout.addEventListener("click", () => {
-    aboutModal.classList.toggle("active")
+openAbout.addEventListener("click", () => {
+  aboutModal.classList.toggle("active")
+  // body.style.position = "fixed";
+})
+closeAbout.addEventListener("click", () => {
+  aboutModal.classList.toggle("active")
+  // body.style.position = "static";
   })
   // Navbar
   let prevScrollpos = window.pageYOffset;
@@ -44,7 +60,7 @@
   }
 
   // Menu
-  const body = document.querySelector("body");
+  // const body = document.querySelector("body");
   const menu = document.querySelector(".menu");
   const burger = document.querySelector("#burger");
   const closeMenu = document.querySelector("#close-menu");
@@ -53,20 +69,20 @@
   burger.addEventListener("click", () => {
     menu.style.right = "0";
     body.style.position = "fixed"
-    menu.style.transition = "all 0.3s";
+    menu.style.transition = "right 0.3s";
 })
-closeMenu.addEventListener("click", () => {
-  menu.style.right = "-100vw";
-  body.style.position = "static"
-  menu.style.transition = "all 0.3s";
-})
-links.forEach((link) => {
-  link.addEventListener("click", () => {
+  closeMenu.addEventListener("click", () => {
     menu.style.right = "-100vw";
-    body.style.position = "static";
-    menu.style.transition = "none";
+    body.style.position = "static"
+    menu.style.transition = "right 0.3s";
   })
-})
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.style.right = "-100vw";
+      body.style.position = "static";
+      menu.style.transition = "none";
+    })
+  })
 
 // Intersection Observer
 const headings = document.querySelectorAll("h2");
@@ -78,6 +94,7 @@ const observer = new IntersectionObserver(entries => {
   })
 }, {
   threshold: 1
+  //rootMargin: "-100px" makes smaller container, with + you can load an image sooner
 });
 
 headings.forEach(heading => {

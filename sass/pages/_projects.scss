@@ -71,6 +71,7 @@
       columns: 2;
       text-align: center;
       list-style: none;
+      padding: 2rem;
     }
     .options {
       display: flex;
@@ -101,13 +102,13 @@
     img {
       max-width: 520px;
       width: 80%;
-      padding: 3rem 0;
     }
     ul {
       columns: 2;
       text-align: center;
       list-style: none;
       width: 36rem;
+      padding: 2rem 0
     }
     .options {
       margin-top: 12px;
@@ -151,7 +152,7 @@
   .index {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: min(46%, 15rem);
     padding : 12px;
     .circle {
       height: 10px;
