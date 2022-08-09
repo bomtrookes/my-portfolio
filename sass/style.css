@@ -222,7 +222,7 @@ footer #foot-info {
   transform: translateX(0);
 }
 #home h2 {
-  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+  font-size: clamp(3rem, 2rem + 5vw, 5rem);
   color: #d79576;
   padding-left: 1em;
   transition: all 0.3s;
@@ -331,7 +331,7 @@ footer #foot-info {
   width: 100%;
 }
 #about .about-title h2 {
-  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+  font-size: clamp(3rem, 2rem + 5vw, 5rem);
   padding-right: 2rem;
 }
 #about .about-title .title-line {
@@ -348,7 +348,7 @@ footer #foot-info {
   justify-content: center;
   align-items: center;
   min-height: inherit;
-  margin: 7rem 0;
+  margin: 3rem 0;
 }
 #about .about-text p {
   color: #242630;
@@ -362,10 +362,20 @@ footer #foot-info {
   margin-top: 4rem;
 }
 #about .about-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 3;
   flex-grow: 1;
   opacity: 0;
   transition: all 0.4s;
+}
+#about .about-top img {
+  width: min(35rem, 65%);
+  border-radius: 8px;
+  border-top: 4px solid #F7F9FB;
+  border-bottom: 4px solid #F7F9FB;
+  margin: 1rem 0;
 }
 #about .about-bottom {
   z-index: 3;
@@ -379,6 +389,7 @@ footer #foot-info {
   width: 100%;
 }
 #about .skills-title h3 {
+  margin-top: 2rem;
   font-size: 28px;
   padding-left: 8%;
 }
@@ -392,86 +403,23 @@ footer #foot-info {
 #about .skills-container {
   display: grid;
   place-items: center;
-  margin: 5rem 2rem;
+  margin: 3rem 2rem 4rem 2rem;
 }
 #about #skills-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px;
-  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.08);
   width: min(64rem, 80%);
   min-width: 280px;
+  border-top: 4px solid #242630;
+  border-bottom: 4px solid #242630;
 }
 #about #skills-list ul {
   color: #F7F9FB;
   font-size: 2rem;
   list-style: none;
-}
-
-.about-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
-.about-modal .about-close {
-  color: #F7F9FB;
-  padding: 8px;
-  width: 100%;
-  text-align: right;
-}
-.about-modal .modal-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  overflow: scroll;
-}
-.about-modal .modal-container img {
-  height: 240px;
-}
-.about-modal .modal-container h3 {
-  font-size: 24px;
-  width: 100%;
-  padding-left: 24px;
-  padding-bottom: 12px;
-}
-.about-modal .modal-container p {
-  padding: 0 24px 24px 24px;
-}
-.about-modal .modal-container .square {
-  height: 200px;
-  width: 200px;
-  margin-bottom: 50px;
-  background-image: url("../../img/bio.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  border-radius: 8px;
-}
-
-.active {
-  display: block;
-  background-color: #F7F9FB;
-  background-image: linear-gradient(350deg, #de8258 0%, #de8258 60%, #242630 60%, #242630 60%);
-}
-
-.hexagon {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: -16px;
-  height: 64%;
-  width: 108%;
-  background-color: #F7F9FB;
-  -webkit-clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
-          clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
 }
 
 #projects {
@@ -506,7 +454,7 @@ footer #foot-info {
   align-items: flex-end;
 }
 #projects h2 {
-  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+  font-size: clamp(3rem, 2rem + 5vw, 5rem);
   color: #242630;
   width: 100%;
   text-align: right;
@@ -671,7 +619,7 @@ footer #foot-info {
   flex-direction: column;
 }
 #contact h2 {
-  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+  font-size: clamp(3rem, 2rem + 5vw, 5rem);
   color: #242630;
   margin-top: 3rem;
   margin-left: 2rem;

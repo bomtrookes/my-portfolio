@@ -48,7 +48,7 @@
     justify-content: center;
     align-items: center;
     min-height: inherit;
-    margin: 7rem 0;
+    margin: 3rem 0;
     p {
       color : $dark;
       width: min(64rem, 80%);
@@ -62,10 +62,20 @@
     };
   }
   .about-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 3;
     flex-grow: 1;
     opacity: 0;
     transition: all 0.4s;
+    img {
+      width: min(35rem, 65%);
+      border-radius: 8px;
+      border-top: 4px solid $off-white;
+      border-bottom: 4px solid $off-white;
+      margin: 1rem 0;
+    }
   }
   .about-bottom {
     z-index: 3;
@@ -78,6 +88,7 @@
     flex-direction: column;
     width: 100%;
     h3 {
+      margin-top: 2rem;
       font-size: 28px;
       padding-left: 8%;
     }
@@ -92,82 +103,22 @@
   .skills-container {
     display: grid;
     place-items: center;
-    margin: 5rem 2rem;
+    margin: 3rem 2rem 4rem 2rem;
   }
   #skills-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px;
-    border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.08);
     width: min(64rem, 80%);
     min-width: 280px;
+    border-top: 4px solid $dark;
+    border-bottom: 4px solid $dark;
     ul {
     color : $off-white;
     font-size: 2rem;
     list-style: none;
     }
   }
-}
-// Modal
-.about-modal {
-  display: none;
-  position: fixed;
-  top:0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  .about-close {
-    color: $off-white;
-    padding: 8px;
-    width: 100%;
-    text-align: right;
-  }
-  .modal-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    overflow: scroll;
-    img{
-      height: 240px;
-    }
-    h3 {
-      font-size: 24px;
-      width: 100%;
-      padding-left: 24px;
-      padding-bottom: 12px;
-    }
-    p {
-      padding: 0 24px 24px 24px;
-    }
-    .square {
-      height : 200px;
-      width: 200px;
-      margin-bottom: 50px;
-      background-image: url("../../img/bio.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: bottom;
-      border-radius: 8px;
-    }
-  }
-}
-.active {
-  display: block;
-  background-color: $off-white;
-  background-image: linear-gradient(350deg, $orange 0%, $orange 60%, $dark 60%, $dark 60%);
-}
-.hexagon {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: -16px;
-  height: 64%;
-  width: 108%;
-  background-color: $off-white;
-  clip-path: polygon(50% 5%, 90% 25%, 90% 75%, 50% 95%, 10% 75%, 10% 25%);
 }

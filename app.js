@@ -34,19 +34,6 @@ window.onload = function() {
   puzzModal.classList.toggle("active")
   // body.style.position = "static";
 })
-// About
-const openAbout = document.querySelector(".about-open");
-const closeAbout = document.querySelector(".about-close")
-const aboutModal = document.querySelector(".about-modal");
-
-openAbout.addEventListener("click", () => {
-  aboutModal.classList.toggle("active")
-  // body.style.position = "fixed";
-})
-closeAbout.addEventListener("click", () => {
-  aboutModal.classList.toggle("active")
-  // body.style.position = "static";
-  })
   // Navbar
   let prevScrollpos = window.pageYOffset;
   const nav = document.querySelector("nav")
