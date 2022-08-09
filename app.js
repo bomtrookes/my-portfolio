@@ -88,3 +88,27 @@ const observer = new IntersectionObserver(entries => {
 headings.forEach(heading => {
   observer.observe(heading)
 })
+
+// Index
+const galPos = () => {
+  let container = document.querySelector('.pro-container');
+  let pos = document.querySelectorAll('.index .circle');
+
+  container.addEventListener('scroll', (e) => {
+      if(container.scrollLeft < (container.scrollWidth / 2)) {
+          for(i = 0; i < pos.length; i++) {
+          pos[i].style.backgroundColor="grey";
+          }
+       pos[1].style.backgroundColor="white";
+      }
+      if(container.scrollLeft > container.scrollWidth / 2.9) {
+           for(i = 0; i < pos.length; i++) {
+          pos[i].style.backgroundColor="grey";
+          }
+       pos[0].style.backgroundColor="white";
+      }
+
+  })
+}
+galPos();
+window.onresize = galPos();

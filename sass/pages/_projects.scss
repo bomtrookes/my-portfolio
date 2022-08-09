@@ -140,16 +140,32 @@
   }
   .list-modal, .puzz-modal {
     display: none;
-    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    backdrop-filter: blur(4px);
+  }
+  .modal-box {
+    background-color: $off-white;
+    border-radius: 8px;
+    padding: 0 1rem;
+    margin: 0 2rem;
+    .list-close, .puzz-close {
+      text-align: right;
+      margin-top: 1rem;
+    }
+    .content {
+      padding: 2rem 3rem;
+    }
   }
   .active {
-    display: block;
-    background-color: white;
+    display: flex;
   }
   .index {
     display: flex;
@@ -163,7 +179,7 @@
       background-color: $off-white;
     }
     .circle:first-child {
-      background-color: $grey;
+      background-color: grey;
     }
   }
 }
