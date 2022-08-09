@@ -34,19 +34,6 @@ window.onload = function() {
   puzzModal.classList.toggle("active")
   // body.style.position = "static";
 })
-// About
-const openAbout = document.querySelector(".about-open");
-const closeAbout = document.querySelector(".about-close")
-const aboutModal = document.querySelector(".about-modal");
-
-openAbout.addEventListener("click", () => {
-  aboutModal.classList.toggle("active")
-  // body.style.position = "fixed";
-})
-closeAbout.addEventListener("click", () => {
-  aboutModal.classList.toggle("active")
-  // body.style.position = "static";
-  })
   // Navbar
   let prevScrollpos = window.pageYOffset;
   const nav = document.querySelector("nav")
@@ -101,3 +88,27 @@ const observer = new IntersectionObserver(entries => {
 headings.forEach(heading => {
   observer.observe(heading)
 })
+
+// Index
+const galPos = () => {
+  let container = document.querySelector('.pro-container');
+  let pos = document.querySelectorAll('.index .circle');
+
+  container.addEventListener('scroll', (e) => {
+      if(container.scrollLeft < (container.scrollWidth / 2)) {
+          for(i = 0; i < pos.length; i++) {
+          pos[i].style.backgroundColor="grey";
+          }
+       pos[1].style.backgroundColor="white";
+      }
+      if(container.scrollLeft > container.scrollWidth / 2.9) {
+           for(i = 0; i < pos.length; i++) {
+          pos[i].style.backgroundColor="grey";
+          }
+       pos[0].style.backgroundColor="white";
+      }
+
+  })
+}
+galPos();
+window.onresize = galPos();
