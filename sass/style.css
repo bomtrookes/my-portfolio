@@ -436,6 +436,12 @@ footer #foot-info {
   overflow: hidden;
   background-color: #78D3C7;
 }
+#projects .pro-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
 #projects .pro-container {
   z-index: 2;
   display: flex;
@@ -462,18 +468,18 @@ footer #foot-info {
   padding-right: 2rem;
 }
 #projects h3 {
-  font-size: 24px;
+  font-size: 2.5em;
 }
-#projects .title-line {
-  min-height: 4px;
-  width: 45%;
-  background-color: #69696F;
+#projects h4 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1rem;
 }
 #projects p {
   font-size: clamp(2rem, 1.5rem + 1vw, 3rem);
   font-family: "Neucha", monospace, cursive;
 }
-#projects .pro-1 {
+#projects .pro-1, #projects .pro-2 {
   scroll-snap-align: start;
   display: flex;
   flex-grow: 1;
@@ -483,19 +489,21 @@ footer #foot-info {
   align-items: center;
   position: relative;
 }
-#projects .pro-1 .pro-1-content {
-  padding: 1rem;
+#projects .list {
+  max-height: 28em;
+}
+#projects .pro-content {
   text-align: justify;
-  border-top: 4px solid #242630;
-  border-bottom: 4px solid #242630;
   margin: 2rem 0;
   width: min(64rem, 80%);
+}
+#projects .pro-content p {
+  border-top: 4px solid #242630;
+  border-bottom: 4px solid #242630;
   background-color: rgba(255, 255, 255, 0.3);
+  padding: 1rem;
 }
-#projects .pro-1 .list {
-  max-height: 40rem;
-}
-#projects .pro-1 ul {
+#projects .pro-content ul {
   width: 36rem;
   -moz-columns: 2;
        columns: 2;
@@ -503,23 +511,24 @@ footer #foot-info {
   list-style: none;
   padding: 2rem;
 }
-#projects .pro-1 .options {
+#projects .pro-content .options {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
-  font-size: 18px;
-  padding-left: 6px;
+  align-items: center;
+  font-size: 2em;
 }
-#projects .pro-1 .options a {
+#projects .list-open, #projects .puzz-open {
+  font-family: "Neucha", monospace, cursive;
+  font-size: 2em;
+}
+#projects a {
   padding: 0 1rem;
 }
-#projects .pro-1 .options a:visited {
+#projects a:visited {
   color: #242630;
 }
-#projects .pro-1 .options .list-open {
-  font-family: "Neucha", monospace, cursive;
-}
-#projects .pro-2 {
+
+.pro-2 {
   scroll-snap-align: start;
   min-width: 100%;
   display: flex;
@@ -529,11 +538,13 @@ footer #foot-info {
   align-items: center;
   position: relative;
 }
-#projects .pro-2 img {
+
+.puzz {
   max-width: 520px;
   width: 80%;
 }
-#projects .pro-2 ul {
+
+ul {
   -moz-columns: 2;
        columns: 2;
   text-align: center;
@@ -541,32 +552,8 @@ footer #foot-info {
   width: 36rem;
   padding: 2rem 0;
 }
-#projects .pro-2 .options {
-  margin-top: 12px;
-  display: flex;
-  font-size: 18px;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-#projects .pro-2 .options .puzz-open, #projects .pro-2 .options a {
-  padding: 0 6px;
-}
-#projects .pro-2 .options .puzz-open:visited, #projects .pro-2 .options a:visited {
-  color: #242630;
-}
-#projects .pro-2 .pro-2-content {
-  padding: 1rem;
-  border-top: 4px solid #242630;
-  border-bottom: 4px solid #242630;
-  margin: 2rem 0;
-  width: min(64rem, 80%);
-  background-color: rgba(255, 255, 255, 0.3);
-}
-#projects .pro-2 .pro-2-content p {
-  text-align: justify;
-}
-#projects .list-modal, #projects .puzz-modal {
+
+.list-modal, .puzz-modal {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -575,53 +562,47 @@ footer #foot-info {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
-#projects .modal-box {
+
+.modal-box {
   background-color: #F7F9FB;
   border-radius: 8px;
+  border-top: 4px solid #242630;
+  border-bottom: 4px solid #242630;
   padding: 0 1rem;
   margin: 0 2rem;
 }
-#projects .modal-box .list-close, #projects .modal-box .puzz-close {
+.modal-box .list-close, .modal-box .puzz-close {
   text-align: right;
   margin-top: 1rem;
 }
-#projects .modal-box .content {
-  padding: 2rem 3rem;
+.modal-box .content {
+  padding: 2rem 3rem 4rem 2rem;
+  line-height: 1.5;
 }
-#projects .active {
+
+.active {
   display: flex;
 }
-#projects .index {
+
+.index {
   display: flex;
   justify-content: space-around;
   width: min(46%, 15rem);
   padding: 12px;
 }
-#projects .index .circle {
+.index .circle {
   height: 10px;
   width: 10px;
   border-radius: 50%;
   background-color: #F7F9FB;
 }
-#projects .index .circle:first-child {
+.index .circle:first-child {
   background-color: grey;
-}
-
-.triangle {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: -35px;
-  height: 98%;
-  width: 113%;
-  background-color: #F7F9FB;
-  -webkit-clip-path: polygon(106% 15%, 0% 0, 79% 94%);
-          clip-path: polygon(106% 15%, 0% 0, 79% 94%);
 }
 
 #contact {
