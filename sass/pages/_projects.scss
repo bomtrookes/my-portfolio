@@ -93,6 +93,11 @@
       justify-content: space-between;
       align-items: center;
       font-size: 2em;
+      .icons a {
+        padding: 0 1rem;
+        &:visited {
+          color: $dark;
+        }
     }
   }
 
@@ -100,11 +105,6 @@
     font-family: 'Neucha', monospace, cursive;
     font-size: 2em;
   }
-  a {
-    padding: 0 1rem;
-    &:visited {
-      color: $dark;
-    }
   }
   }
   .pro-2 {

@@ -73,13 +73,26 @@ nav {
   }
 }
 
-// @media (min-width: 992px) {
-//   nav {
-//     left: 50%;
-//     transform: translateX(-50%);
-//     width: 90vw;
-//     min-width: 300px;
-//     border-left: 2px solid $grey;
-//     border-right: 2px solid $grey;
-//   }
-// }
+@media (min-width: 992px) {
+  nav {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      height: 100%;
+      position: static;
+      right: 0;
+      font-size: 24px;
+      .links {
+        flex-direction: row;
+        a {
+          padding: 0 6px;
+          margin: 0;
+        }
+      }
+    }
+    #close-menu, #burger {
+      display: none;
+    }
+  }
+}

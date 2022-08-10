@@ -107,6 +107,27 @@ nav .fade-in {
   opacity: 1 !important;
 }
 
+@media (min-width: 992px) {
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    position: static;
+    right: 0;
+    font-size: 24px;
+  }
+  nav .menu .links {
+    flex-direction: row;
+  }
+  nav .menu .links a {
+    padding: 0 6px;
+    margin: 0;
+  }
+  nav #close-menu, nav #burger {
+    display: none;
+  }
+}
 #home .socials {
   margin: 6rem 0 2rem 0;
   z-index: 1;
@@ -517,15 +538,15 @@ footer #foot-info {
   align-items: center;
   font-size: 2em;
 }
-#projects .list-open, #projects .puzz-open {
-  font-family: "Neucha", monospace, cursive;
-  font-size: 2em;
-}
-#projects a {
+#projects .pro-content .options .icons a {
   padding: 0 1rem;
 }
-#projects a:visited {
+#projects .pro-content .options .icons a:visited {
   color: #242630;
+}
+#projects .pro-content .list-open, #projects .pro-content .puzz-open {
+  font-family: "Neucha", monospace, cursive;
+  font-size: 2em;
 }
 
 .pro-2 {
