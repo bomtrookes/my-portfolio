@@ -22,6 +22,11 @@
     border-top: 4px solid black;
     border-bottom: 4px solid black;
   }
+  h3 {
+    margin-top: 2rem;
+    font-size: 28px;
+    padding-left: 8%;
+  }
   .about-title {
     z-index: 3;
     padding-top: 12px;
@@ -59,7 +64,7 @@
       font-family: 'Racing Sans One', cursive;
       color: $off-white;
       margin-top: 4rem;
-    };
+    }
   }
   .about-top {
     display: flex;
@@ -72,9 +77,9 @@
     img {
       width: min(35rem, 65%);
       border-radius: 8px;
-      border-top: 4px solid $off-white;
-      border-bottom: 4px solid $off-white;
-      margin: 1rem 0;
+      border-top: 4px solid $dark;
+      border-bottom: 4px solid $dark;
+      margin-top: 4rem;
     }
   }
   .about-bottom {
@@ -87,11 +92,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    h3 {
-      margin-top: 2rem;
-      font-size: 28px;
-      padding-left: 8%;
-    }
+  }
     .title-line {
       z-index: 3;
       height: 4px;
@@ -107,11 +108,11 @@
   }
   #skills-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 18px;
+    padding: 18px 0;
     background-color: rgba(0, 0, 0, 0.08);
-    width: min(64rem, 80%);
+    width: min(56rem, 80%);
     min-width: 280px;
     border-top: 4px solid $dark;
     border-bottom: 4px solid $dark;
@@ -120,5 +121,28 @@
     font-size: 2rem;
     list-style: none;
     }
+  }
+
+@media (min-width: 992px) {
+  #about .about-text {
+    flex-direction: row;
+    justify-content: space-evenly;
+    .skills-title {
+      text-align: center;
+      font-size: 28px;
+      padding-left: 0;
+      padding-right: 25%;
+    }
+    p, img {
+      margin: 0 1rem;
+    }
+    img {
+      width: 27rem;
+    }
+    .skills-title h3 {
+      text-align: center;
+      padding-left: 0;
+      padding-right: 25%;
+     }
   }
 }
