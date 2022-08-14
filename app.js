@@ -9,6 +9,9 @@ window.onload = function() {
   document.querySelector('.socials').classList.add("fade-up");
   document.querySelector('#logo').classList.add("fade-in");
   document.querySelector('#burger').classList.add("fade-in");
+  document.querySelectorAll(".links a").forEach((link) => {
+    link.classList.add("fade-down")
+  })
 }
 
 // Project Modal
@@ -54,23 +57,25 @@ window.onload = function() {
   const closeMenu = document.querySelector("#close-menu");
   const links = document.querySelectorAll(".menu a");
 
-  burger.addEventListener("click", () => {
-    menu.style.right = "0";
-    body.style.position = "fixed"
-    menu.style.transition = "right 0.3s";
-})
-  closeMenu.addEventListener("click", () => {
-    menu.style.right = "-100vw";
-    body.style.position = "static"
-    menu.style.transition = "right 0.3s";
+  if(window.innerWidth < 992) {
+    burger.addEventListener("click", () => {
+      menu.style.right = "0";
+      body.style.position = "fixed"
+      menu.style.transition = "right 0.3s";
   })
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
+    closeMenu.addEventListener("click", () => {
       menu.style.right = "-100vw";
-      body.style.position = "static";
-      menu.style.transition = "none";
+      body.style.position = "static"
+      menu.style.transition = "right 0.3s";
     })
-  })
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.style.right = "-100vw";
+        body.style.position = "static";
+        menu.style.transition = "none";
+      })
+    })
+  }
 
 // Intersection Observer
 const headings = document.querySelectorAll(".reveal");

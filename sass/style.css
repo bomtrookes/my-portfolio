@@ -79,6 +79,9 @@ nav .menu a {
   text-decoration: none;
   color: #de8258;
   margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s;
 }
 nav .menu p {
   width: 100%;
@@ -94,6 +97,10 @@ nav .menu .links {
   justify-content: center;
   height: 100%;
 }
+nav .menu .links .fade-down {
+  opacity: 1;
+  transform: translateY(0);
+}
 nav #burger {
   color: #de8258;
   font-size: 4rem;
@@ -107,6 +114,27 @@ nav .fade-in {
   opacity: 1 !important;
 }
 
+@media (min-width: 992px) {
+  nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 100%;
+    position: static;
+    right: 0;
+    font-size: 24px;
+  }
+  nav .menu .links {
+    flex-direction: row;
+  }
+  nav .menu .links a {
+    padding: 0 6px;
+    margin: 0;
+  }
+  nav #close-menu, nav #burger {
+    display: none;
+  }
+}
 #home .socials {
   margin: 6rem 0 2rem 0;
   z-index: 1;
@@ -143,6 +171,13 @@ nav .fade-in {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.3s;
+}
+.resume-box #resume-btn:hover {
+  background-color: #de8258;
+  border: 4px solid #F7F9FB;
+  color: #F7F9FB;
+  cursor: pointer;
+  transition-delay: 0;
 }
 
 footer {
@@ -314,6 +349,12 @@ footer #foot-info {
   background-color: #E9C161;
   overflow: hidden;
 }
+#about a {
+  color: #69696F;
+}
+#about a:hover {
+  color: #78D3C7;
+}
 #about p {
   font-family: "Neucha", monospace, cursive;
   padding: 12px;
@@ -321,6 +362,11 @@ footer #foot-info {
   background-color: rgba(255, 255, 255, 0.237);
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+}
+#about h3 {
+  margin-top: 2rem;
+  font-size: 28px;
+  padding-left: 8%;
 }
 #about .about-title {
   z-index: 3;
@@ -373,9 +419,9 @@ footer #foot-info {
 #about .about-top img {
   width: min(35rem, 65%);
   border-radius: 8px;
-  border-top: 4px solid #F7F9FB;
-  border-bottom: 4px solid #F7F9FB;
-  margin: 1rem 0;
+  border-top: 4px solid #242630;
+  border-bottom: 4px solid #242630;
+  margin-top: 4rem;
 }
 #about .about-bottom {
   z-index: 3;
@@ -388,40 +434,60 @@ footer #foot-info {
   flex-direction: column;
   width: 100%;
 }
-#about .skills-title h3 {
-  margin-top: 2rem;
-  font-size: 28px;
-  padding-left: 8%;
-}
-#about .skills-title .title-line {
+#about .title-line {
   z-index: 3;
   height: 4px;
   width: 40%;
   background-color: #69696F;
   border-radius: 0 4px 4px 0;
 }
-#about .skills-container {
+
+.skills-container {
   display: grid;
   place-items: center;
   margin: 3rem 2rem 4rem 2rem;
 }
-#about #skills-list {
+
+#skills-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 18px;
+  padding: 18px 0;
   background-color: rgba(0, 0, 0, 0.08);
-  width: min(64rem, 80%);
+  width: min(56rem, 80%);
   min-width: 280px;
   border-top: 4px solid #242630;
   border-bottom: 4px solid #242630;
 }
-#about #skills-list ul {
+#skills-list ul {
   color: #F7F9FB;
   font-size: 2rem;
   list-style: none;
 }
 
+@media (min-width: 992px) {
+  #about .about-text {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #about .about-text .skills-title {
+    text-align: center;
+    font-size: 28px;
+    padding-left: 0;
+    padding-right: 25%;
+  }
+  #about .about-text p, #about .about-text img {
+    margin: 0 1rem;
+  }
+  #about .about-text img {
+    width: 27rem;
+  }
+  #about .about-text .skills-title h3 {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 25%;
+  }
+}
 #projects {
   opacity: 0;
   transition: all 0.3s;
@@ -435,6 +501,12 @@ footer #foot-info {
   width: 100vw;
   overflow: hidden;
   background-color: #78D3C7;
+}
+#projects a {
+  color: #242630;
+}
+#projects a:hover {
+  color: #de8258;
 }
 #projects .pro-title {
   display: flex;
@@ -469,6 +541,7 @@ footer #foot-info {
 }
 #projects h3 {
   font-size: 2.5em;
+  color: #242630;
 }
 #projects h4 {
   font-size: 2rem;
@@ -490,7 +563,7 @@ footer #foot-info {
   position: relative;
 }
 #projects .list {
-  max-height: 28em;
+  max-height: 38em;
 }
 #projects .pro-content {
   text-align: justify;
@@ -503,7 +576,7 @@ footer #foot-info {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 1rem;
 }
-#projects .pro-content ul {
+#projects .pro-content .lang {
   width: 36rem;
   -moz-columns: 2;
        columns: 2;
@@ -517,15 +590,22 @@ footer #foot-info {
   align-items: center;
   font-size: 2em;
 }
-#projects .list-open, #projects .puzz-open {
+#projects .pro-content .options .icons a {
+  padding: 0 1rem;
+}
+#projects .pro-content .options .icons a:visited {
+  color: #242630;
+}
+#projects .pro-content .options .icons a:hover {
+  color: #de8258;
+}
+#projects .pro-content .list-open, #projects .pro-content .puzz-open {
   font-family: "Neucha", monospace, cursive;
   font-size: 2em;
 }
-#projects a {
-  padding: 0 1rem;
-}
-#projects a:visited {
-  color: #242630;
+#projects .pro-content .list-open:hover, #projects .pro-content .puzz-open:hover {
+  color: #de8258;
+  cursor: pointer;
 }
 
 .pro-2 {
@@ -544,7 +624,7 @@ footer #foot-info {
   width: 80%;
 }
 
-ul {
+.lang {
   -moz-columns: 2;
        columns: 2;
   text-align: center;
@@ -575,10 +655,14 @@ ul {
   border-bottom: 4px solid #242630;
   padding: 0 1rem;
   margin: 0 2rem;
+  width: max(43rem, 65%);
 }
 .modal-box .list-close, .modal-box .puzz-close {
   text-align: right;
   margin-top: 1rem;
+}
+.modal-box .list-close:hover, .modal-box .puzz-close:hover {
+  color: #de8258;
 }
 .modal-box .content {
   padding: 2rem 3rem 4rem 2rem;

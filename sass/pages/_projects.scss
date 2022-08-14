@@ -11,6 +11,12 @@
   width: 100vw;
   overflow: hidden;
   background-color: $teal;
+  a {
+    color: $dark;
+    &:hover {
+      color: $orange;
+    }
+  }
   .pro-title {
     display: flex;
     justify-content: space-between;
@@ -43,6 +49,7 @@
   }
   h3 {
     font-size: 2.5em;
+    color: $dark;
   }
   h4 {
     font-size: 2rem;
@@ -69,7 +76,7 @@
     position: relative;
   }
   .list {
-    max-height: 28em;
+    max-height: 38em;
   }
   .pro-content {
     text-align: justify;
@@ -81,7 +88,7 @@
       background-color: rgba(255, 255, 255, 0.3);
       padding: 1rem;
     }
-    ul {
+    .lang {
       width: 36rem;
       columns: 2;
       text-align: center;
@@ -93,18 +100,25 @@
       justify-content: space-between;
       align-items: center;
       font-size: 2em;
+      .icons a {
+        padding: 0 1rem;
+        &:visited {
+          color: $dark;
+        }
+        &:hover {
+          color: $orange;
+        }
     }
   }
 
   .list-open, .puzz-open {
     font-family: 'Neucha', monospace, cursive;
     font-size: 2em;
-  }
-  a {
-    padding: 0 1rem;
-    &:visited {
-      color: $dark;
+    &:hover {
+      color: $orange;
+      cursor: pointer;
     }
+  }
   }
   }
   .pro-2 {
@@ -121,7 +135,7 @@
     max-width: 520px;
     width: 80%;
   }
-  ul {
+  .lang {
     columns: 2;
     text-align: center;
     list-style: none;
@@ -148,9 +162,13 @@
     border-bottom: 4px solid $dark;
     padding: 0 1rem;
     margin: 0 2rem;
+    width: max(43rem, 65%);
     .list-close, .puzz-close {
       text-align: right;
       margin-top: 1rem;
+      &:hover {
+        color: $orange;
+      }
     }
     .content {
       padding: 2rem 3rem 4rem 2rem;

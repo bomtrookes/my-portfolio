@@ -13,9 +13,9 @@
     <div class="menu">
       <p id="close-menu">Close X</p>
       <div class="links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a style="transition-delay: 100ms" href="#about">About</a>
+        <a style="transition-delay: 200ms" href="#projects">Projects</a>
+        <a style="transition-delay: 300ms" href="#contact">Contact</a>
       </div>
     </div>
     <h3 id="burger">☰</h3>
@@ -28,7 +28,7 @@
     </div>
     <div class="bottom">
       <div class="resume-box">
-          <a style="transition-delay: 500ms" id="resume-btn" href="TomBrookesCV.pdf" download target="_blank">Download CV</a>
+          <a style="transition-delay: 500ms" id="resume-btn" href="Tom_Brookes_CV.pdf" download target="_blank">Download CV</a>
         </div>
         <div style="transition-delay: 600ms" class="socials">
           <a href="https://www.linkedin.com/in/thomasbrookes" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
@@ -43,26 +43,24 @@
     <div class="about-top reveal">
       <div class="about-title">
         <h2>About Me.</h2>
-        <div style="display:none" class="title-line"></div>
       </div>
 
-      <div class="about-text">
-        <p>
-          I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow.
-          <br>
-          <br>
-          I recently graduated from 24-week part-time coding bootcamp learning with Le Wagon.
-          I designed, implemented and shipped to production an AirBnB clone and a Rails prototype social-media app called List-It.
-       </p>
-        <p style="display:none;"class="about-open">Read More...</p>
-      </div>
-      <img src="./img/bio.png" alt="bio img">
+        <div class="about-text">
+          <p>
+            I have been seeking a career that I could be passionate about for some time. During the first lockdown when wanting to use my time wisely, I came across the magic of coding by chance and soon I had multiple books and online tutorials to follow.
+            <br>
+            <br>
+            I recently graduated from a 24-week part-time coding bootcamp learning with <a href="https://www.lewagon.com/london" target="_blank">Le Wagon</a>.
+            I designed, implemented and shipped to production an AirBnB clone and a Rails prototype social-media app called <a href="http://www.list-it.lol/" target="_blank">'List-It'</a>.
+        </p>
+          <p style="display:none;"class="about-open">Read More...</p>
+          <img src="./img/bio.png" alt="bio img">
+        </div>
     </div>
 
     <div class="about-bottom reveal">
       <div class="skills-title">
         <h3 class="reveal">Skills.</h3>
-        <div style="display:none" class="title-line"></div>
       </div>
 
       <div class="skills-container">
@@ -111,7 +109,7 @@
           <h4 class="list-open">Read More</h4>
         </div>
         <img class="list" src="img/listit.png" alt="list-it thumbnail">
-        <ul class="li-lang">
+        <ul class="lang">
           <li><p>Ruby on Rails</p></li>
           <li><p>JavaScript</p></li>
           <li><p>Stimulus</p></li>
@@ -144,7 +142,7 @@
         </div>
           <img class="puzz" src="img/puzzlend1.png" alt="puzzlend img">
           <img style="display: none" src="img/puzzlend2.png" alt="puzzlend img">
-          <ul>
+          <ul class="lang">
             <li><p>Ruby on Rails</p></li>
             <li><p>JavaScript</p></li>
             <li><p>Stimulus</p></li>
