@@ -172,6 +172,13 @@ nav .fade-in {
   transform: translateY(30px);
   transition: all 0.3s;
 }
+.resume-box #resume-btn:hover {
+  background-color: #de8258;
+  border: 4px solid #F7F9FB;
+  color: #F7F9FB;
+  cursor: pointer;
+  transition-delay: 0;
+}
 
 footer {
   display: flex;
@@ -342,6 +349,12 @@ footer #foot-info {
   background-color: #E9C161;
   overflow: hidden;
 }
+#about a {
+  color: #69696F;
+}
+#about a:hover {
+  color: #78D3C7;
+}
 #about p {
   font-family: "Neucha", monospace, cursive;
   padding: 12px;
@@ -492,6 +505,9 @@ footer #foot-info {
 #projects a {
   color: #242630;
 }
+#projects a:hover {
+  color: #de8258;
+}
 #projects .pro-title {
   display: flex;
   justify-content: space-between;
@@ -580,9 +596,16 @@ footer #foot-info {
 #projects .pro-content .options .icons a:visited {
   color: #242630;
 }
+#projects .pro-content .options .icons a:hover {
+  color: #de8258;
+}
 #projects .pro-content .list-open, #projects .pro-content .puzz-open {
   font-family: "Neucha", monospace, cursive;
   font-size: 2em;
+}
+#projects .pro-content .list-open:hover, #projects .pro-content .puzz-open:hover {
+  color: #de8258;
+  cursor: pointer;
 }
 
 .pro-2 {
@@ -637,6 +660,9 @@ footer #foot-info {
 .modal-box .list-close, .modal-box .puzz-close {
   text-align: right;
   margin-top: 1rem;
+}
+.modal-box .list-close:hover, .modal-box .puzz-close:hover {
+  color: #de8258;
 }
 .modal-box .content {
   padding: 2rem 3rem 4rem 2rem;

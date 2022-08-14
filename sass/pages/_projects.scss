@@ -13,6 +13,9 @@
   background-color: $teal;
   a {
     color: $dark;
+    &:hover {
+      color: $orange;
+    }
   }
   .pro-title {
     display: flex;
@@ -102,12 +105,19 @@
         &:visited {
           color: $dark;
         }
+        &:hover {
+          color: $orange;
+        }
     }
   }
 
   .list-open, .puzz-open {
     font-family: 'Neucha', monospace, cursive;
     font-size: 2em;
+    &:hover {
+      color: $orange;
+      cursor: pointer;
+    }
   }
   }
   }
@@ -156,6 +166,9 @@
     .list-close, .puzz-close {
       text-align: right;
       margin-top: 1rem;
+      &:hover {
+        color: $orange;
+      }
     }
     .content {
       padding: 2rem 3rem 4rem 2rem;
