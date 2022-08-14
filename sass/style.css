@@ -79,6 +79,9 @@ nav .menu a {
   text-decoration: none;
   color: #de8258;
   margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s;
 }
 nav .menu p {
   width: 100%;
@@ -93,6 +96,10 @@ nav .menu .links {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+nav .menu .links .fade-down {
+  opacity: 1;
+  transform: translateY(0);
 }
 nav #burger {
   color: #de8258;

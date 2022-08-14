@@ -9,6 +9,9 @@ window.onload = function() {
   document.querySelector('.socials').classList.add("fade-up");
   document.querySelector('#logo').classList.add("fade-in");
   document.querySelector('#burger').classList.add("fade-in");
+  document.querySelectorAll(".links a").forEach((link) => {
+    link.classList.add("fade-down")
+  })
 }
 
 // Project Modal
