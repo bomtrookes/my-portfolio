@@ -32,6 +32,7 @@
     overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+    transition: all 0.3s;
   }
   .project-box {
     width: 100%;

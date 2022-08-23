@@ -117,3 +117,20 @@ const galPos = () => {
 }
 galPos();
 window.onresize = galPos();
+
+// Scroll Nav
+const right = document.getElementById("right-arrow");
+const left = document.getElementById("left-arrow");
+const box = document.querySelector(".pro-container");
+
+right.addEventListener("click", ()=> {
+  box.scrollLeft = box.scrollWidth / 2;
+  left.style.display = "block";
+  right.style.display = "none";
+  console.log("right click")
+})
+left.addEventListener("click", ()=> {
+  box.scrollLeft = 0;
+  left.style.display = "none";
+  right.style.display = "block";
+})

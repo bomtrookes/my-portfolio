@@ -42,3 +42,23 @@
     }
   }
 }
+#left-arrow, #right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  display: none;
+}
+#left-arrow {
+  text-align: left;
+  left: 45px;
+}
+#right-arrow {
+  text-align: right;
+  right: -28px;
+}
+@media (min-width: 992px) {
+  #right-arrow {
+    display: block;
+  }
+}
