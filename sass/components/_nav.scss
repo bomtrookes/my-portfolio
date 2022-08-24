@@ -6,13 +6,14 @@ nav {
   backdrop-filter: blur(3px);
   position: fixed;
   border-bottom: 2px solid rgba(61, 61, 62, 0.5);
-  padding: 0 8px;
+  padding: 0 16px;
   top:0;
   left: 0;
   z-index: 10;
   width: 100vw;
   min-width: 200px;
   height : 70px;
+  transition: top 0.3s;
   #logo {
     z-index: 10;
     height: 1.4em;
@@ -46,6 +47,10 @@ nav {
       opacity: 0;
       transform: translateY(-20px);
       transition: all 0.4s;
+      &:hover {
+        color: $off-white;
+        transition: all 0.2s;
+      }
     }
     p {
       width : 100%;

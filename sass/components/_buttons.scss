@@ -13,6 +13,14 @@
   }
   i {
     padding: 0 24px;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+#contact .socials {
+  i:hover {
+    color: $teal;
   }
 }
 
@@ -48,6 +56,11 @@
   transform: translateX(-50%);
   z-index: 8;
   display: none;
+  i {
+    &:hover {
+    color: $orange;
+    }
+  }
 }
 #left-arrow {
   text-align: left;

@@ -41,13 +41,14 @@ nav {
           backdrop-filter: blur(3px);
   position: fixed;
   border-bottom: 2px solid rgba(61, 61, 62, 0.5);
-  padding: 0 8px;
+  padding: 0 16px;
   top: 0;
   left: 0;
   z-index: 10;
   width: 100vw;
   min-width: 200px;
   height: 70px;
+  transition: top 0.3s;
 }
 nav #logo {
   z-index: 10;
@@ -82,6 +83,10 @@ nav .menu a {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.4s;
+}
+nav .menu a:hover {
+  color: #F7F9FB;
+  transition: all 0.2s;
 }
 nav .menu p {
   width: 100%;
@@ -153,6 +158,13 @@ nav .fade-in {
 #home .socials i {
   padding: 0 24px;
 }
+#home .socials i:hover {
+  color: #de8258;
+}
+
+#contact .socials i:hover {
+  color: #78D3C7;
+}
 
 .resume-box {
   z-index: 1;
@@ -187,6 +199,9 @@ nav .fade-in {
   transform: translateX(-50%);
   z-index: 8;
   display: none;
+}
+#left-arrow i:hover, #right-arrow i:hover {
+  color: #de8258;
 }
 
 #left-arrow {
@@ -260,6 +275,7 @@ footer #foot-info {
   font-size: 48px;
   color: #de8258;
   opacity: 0;
+  text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.1);
   transform: translateY(30px);
   transition: all 0.3s;
 }
@@ -283,6 +299,7 @@ footer #foot-info {
 #home h2 {
   font-size: clamp(3rem, 2rem + 5vw, 5rem);
   color: #d79576;
+  text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.1);
   padding-left: 1em;
   transition: all 0.3s;
   opacity: 0;
