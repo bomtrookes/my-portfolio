@@ -12,7 +12,16 @@ window.onload = function() {
   document.querySelectorAll(".links a").forEach((link) => {
     link.classList.add("fade-down")
   })
+  function remove() {
+    document.querySelectorAll(".links a").forEach((link) => {
+      link.style.transitionDelay = "0ms";
+    })
+    document.querySelector('#resume-btn').style.transitionDelay = "0ms";
+  }
+  setTimeout(remove, 4500)
 }
+
+
 
 // Project Modal
  const openList = document.querySelector(".list-open");
