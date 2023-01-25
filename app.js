@@ -1,7 +1,7 @@
 const body = document.querySelector("body");
 
 // Loading Animation
-window.onload = function() {
+// window.onload = function() {
   document.querySelector('.title-box h1').classList.add("fade-up");
   document.querySelector('.title-box h2').classList.add("fade-down");
   document.querySelector('.title-box .title-line').classList.add("enter-right");
@@ -19,7 +19,7 @@ window.onload = function() {
     document.querySelector('#resume-btn').style.transitionDelay = "0ms";
   }
   setTimeout(remove, 4500)
-}
+// }
 
 
 
